@@ -1,7 +1,18 @@
-O que eu vou aprender na Trybe:
+What I'm going to learn on Trybe:
 
 - Unix
 - Bash
 - Git
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+- JS
+
+=======
+- Internet
+- HTML
+- CSS
+>>>>>>> 965b5d7355e03f60cb837fcc114b67b5b91e584e
+>>>>>>> 5dfcc9e1ad1992435a5737ee35157b5bf67cd100
 
