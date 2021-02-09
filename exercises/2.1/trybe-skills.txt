@@ -3,7 +3,12 @@ What I'm going to learn on Trybe:
 - Unix
 - Bash
 - Git
+<<<<<<< HEAD
+- JS
+
+=======
 - Internet
 - HTML
 - CSS
+>>>>>>> 965b5d7355e03f60cb837fcc114b67b5b91e584e
 
