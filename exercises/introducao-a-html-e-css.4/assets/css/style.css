@@ -23,6 +23,34 @@ nav a {
 nav a:hover {
     color: blue;
 }
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
 .margin-titles {
-    margin: 10px 0px;
+    margin: 10px 10px;
+}
+.table {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+caption {
+    margin: 7px;
+}
+article p, table {
+    margin-left: 15px;
+}
+article img {
+    display: block;
+    margin: 15px auto;
+    width: 600px;
+}
+.references ul, li {
+    margin-left: 15px;
+}
+.content-adj a {
+    margin-left: 15px;
 }
