@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: relative;
+    background-color: aquamarine;
+    padding: 10px;
+    
+}
+nav {
+    position: absolute;
+    font-size: 1.3em;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+nav a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+nav a:hover {
+    color: blue;
+}
+.margin-titles {
+    margin: 10px 0px;
+}
