@@ -1,7 +1,7 @@
 # Trybe
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por [Victor Canto](https://www.linkedin.com/in/vscanto/)
-_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
+_enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
 _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vida e construir uma carreira de sucesso em tecnologia, onde as pessoas são paga quando conseguir um bom trabalho."_
 
