@@ -4,16 +4,37 @@
     <meta charset="UTF-8" />
     <title>HTML</title>
     <style>
+      body {
+        font-size: 16px;
+      }
       h1 {
         font-size: 65px;
         color: orange;
+        font-family: sans-serif;
       }
       ul {
         background-color: silver;
+        font-style: italic;
+      }
+      p {
+        font-weight: 600;
+        font-size: 3em;
+        text-align: center;
+        line-height: 10px;
+        text-decoration: underline;
       }
       .edit_color {
-        background-color: slateblue;
-        color: snow;
+        background-color: gray;
+        color: black;
+      }
+      #yellow {
+        background-color: yellow;
+      }
+      #red {
+        background-color: red;
+      }
+      #brown {
+        background-color: brown;
       }
     </style>
   </head>
@@ -21,9 +42,9 @@
     <h1>Exercícios 3.2</h1>
     <p class="edit_color">Qual é a sua cor favorita?</p>
     <ul class="edit_color">
-      <li>Amarelo</li>
-      <li>Vermelho</li>
-      <li>Marrom</li>
+      <li id="yellow">Amarelo</li>
+      <li id="red">Vermelho</li>
+      <li id="brown">Marrom</li>
     </ul>
 
     <!-- Exercícios
