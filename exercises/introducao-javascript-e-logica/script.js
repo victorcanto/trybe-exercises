@@ -64,3 +64,43 @@
 //   default:
 //     console.log("não se aplica");
 // }
+
+//Agora a prática - Criar 5 pequenos programas com JS.
+
+//VARIAVEIS UTILIZAAS
+
+let a = 50;
+let b = 50;
+let c = 50;
+
+//PRIMEIRO PROGRAMA
+
+// if (a > b) {
+//   console.log(a);
+// } else if (b > a) {
+//   console.log(b);
+// } else {
+//   console.log("São iguais");
+// }
+
+//SEGUNDO PROGRAMA
+
+// if (a > b && a > c) {
+//   console.log(a);
+// } else if (a === b && a === c) {
+//   console.log("São iguais");
+// } else if (b > a && b > c) {
+//   console.log(b);
+// } else {
+//   console.log(c);
+// }
+
+//TERCEIRO PROGRAMA
+let valorDef = 7;
+if(valorDef > 0) {
+  console.log('positive')
+} else if(valorDef < 0) {
+    console.log('negative')
+} else {
+    console.log('zero')
+}
