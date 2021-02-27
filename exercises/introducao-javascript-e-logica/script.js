@@ -69,11 +69,28 @@
 
 //VARIAVEIS UTILIZAAS
 
-let a = 50;
-let b = 50;
+let a = 5;
+let b = 2;
 let c = 50;
 
-//PRIMEIRO PROGRAMA
+// PRIMEIRO PROGRAMA
+
+// let soma = a + b;
+// console.log(soma);
+
+// let substracao = a - b;
+// console.log(substracao);
+
+// let multiplicacao = a * b;
+// console.log(multiplicacao);
+
+// let divisao = a / b;
+// console.log(divisao);
+
+// let modulo = a % b;
+// console.log(modulo);
+
+// SEGUNDO PROGRAMA
 
 // if (a > b) {
 //   console.log(a);
@@ -83,7 +100,7 @@ let c = 50;
 //   console.log("São iguais");
 // }
 
-//SEGUNDO PROGRAMA
+// TERCEIRO PROGRAMA
 
 // if (a > b && a > c) {
 //   console.log(a);
@@ -95,12 +112,27 @@ let c = 50;
 //   console.log(c);
 // }
 
-//TERCEIRO PROGRAMA
-let valorDef = 7;
-if(valorDef > 0) {
-  console.log('positive')
-} else if(valorDef < 0) {
-    console.log('negative')
+// QUARTO PROGRAMA
+
+// let valorDef = 7;
+// if(valorDef > 0) {
+//   console.log('positive')
+// } else if(valorDef < 0) {
+//     console.log('negative')
+// } else {
+//     console.log('zero')
+// }
+
+let a1 = 60;
+let a2 = 60;
+let a3 = 60;
+
+let soma = a1 + a2 + a3;
+
+if (soma === 180) {
+  console.log('true')
+} else if (soma !== 180) {
+  console.log('false')
 } else {
-    console.log('zero')
+  console.log("Erro!");
 }
