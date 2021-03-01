@@ -141,35 +141,53 @@
 
 // SEXTO PROGRAMA
 
-let partName = 'rei';
-let semAcento = partName.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-let convertPartName = semAcento.toLowerCase();
+// let partName = 'rei';
+// let semAcento = partName.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+// let convertPartName = semAcento.toLowerCase();
 
-switch (convertPartName) {
-  case 'rei':
-    console.log('Move-se em qualquer direção, uma casa por vez');
-    break;
+// switch (convertPartName) {
+//   case 'rei':
+//     console.log('Move-se em qualquer direção, uma casa por vez');
+//     break;
   
-  case 'dama':
-    console.log('Move-se em qualquer direção, porém quantas casa quiser, desde que estejam livres');
-    break;
+//   case 'dama':
+//     console.log('Move-se em qualquer direção, porém quantas casa quiser, desde que estejam livres');
+//     break;
   
-  case 'torre':
-    console.log('Move-se em linha reta, na vertical e horizontal, quantos casas quiser');
-    break;
+//   case 'torre':
+//     console.log('Move-se em linha reta, na vertical e horizontal, quantos casas quiser');
+//     break;
 
-  case 'bispo':
-    console.log('Move-se na diagonal, quantas casas quiser');
-    break;
+//   case 'bispo':
+//     console.log('Move-se na diagonal, quantas casas quiser');
+//     break;
 
-  case 'cavalo':
-    console.log('Movimento em L');
-    break;
+//   case 'cavalo':
+//     console.log('Movimento em L');
+//     break;
 
-  case 'peao':
-    console.log('Move-se sempre uma casa a frente');
-    break;
+//   case 'peao':
+//     console.log('Move-se sempre uma casa a frente');
+//     break;
 
-  default:
-    console.log('error, part is invalid');
+//   default:
+//     console.log('error, part is invalid');
+// }
+
+// SÉTIMO PROGRAMA
+
+nota = 77;
+
+if(nota >= 90 && nota <= 100){
+  console.log('A');
+} else if(nota >= 80 && nota < 90) {
+  console.log('B');
+} else if(nota >= 70 && nota < 80){
+  console.log('C');
+} else if(nota >= 60 && nota < 70){
+  console.log('D');
+} else if(nota >= 50 && nota < 60) {
+  console.log('F');
+} else {
+  console.log('Error, is invalid nota');
 }
