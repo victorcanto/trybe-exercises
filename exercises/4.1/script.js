@@ -69,9 +69,9 @@
 
 //VARIAVEIS UTILIZAAS
 
-let a = 5;
-let b = 2;
-let c = 50;
+// let a = 5;
+// let b = 2;
+// let c = 50;
 
 // PRIMEIRO PROGRAMA
 
@@ -123,16 +123,53 @@ let c = 50;
 //     console.log('zero')
 // }
 
-let a1 = 60;
-let a2 = 60;
-let a3 = 60;
+// QUINTO PROGRAMA
 
-let soma = a1 + a2 + a3;
+// let a1 = 30;
+// let a2 = 50;
+// let a3 = 100;
 
-if (soma === 180) {
-  console.log('true')
-} else if (soma !== 180) {
-  console.log('false')
-} else {
-  console.log("Erro!");
+// let soma = a1 + a2 + a3;
+
+// if (soma === 180) {
+//   console.log(true);
+// } else if (soma < 0) {
+//   console.log("Error");
+// } else {
+//   console.log(false);
+// }
+
+// SEXTO PROGRAMA
+
+let partName = 'rei';
+let semAcento = partName.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+let convertPartName = semAcento.toLowerCase();
+
+switch (convertPartName) {
+  case 'rei':
+    console.log('Move-se em qualquer direção, uma casa por vez');
+    break;
+  
+  case 'dama':
+    console.log('Move-se em qualquer direção, porém quantas casa quiser, desde que estejam livres');
+    break;
+  
+  case 'torre':
+    console.log('Move-se em linha reta, na vertical e horizontal, quantos casas quiser');
+    break;
+
+  case 'bispo':
+    console.log('Move-se na diagonal, quantas casas quiser');
+    break;
+
+  case 'cavalo':
+    console.log('Movimento em L');
+    break;
+
+  case 'peao':
+    console.log('Move-se sempre uma casa a frente');
+    break;
+
+  default:
+    console.log('error, part is invalid');
 }
