@@ -22,12 +22,6 @@ function modulo(a, b) {
   return a % b;
 }
 
-console.log(soma(5, 3));
-console.log(substracao(8, 10));
-console.log(multiplicacao(9, 7));
-console.log(divisao(20, 2));
-console.log(modulo(5, 2));
-
 // SEGUNDO PROGRAMA -REFATORADO
 
 function maiorNumero(a, b) {
@@ -42,15 +36,19 @@ function maiorNumero(a, b) {
 
 // // TERCEIRO PROGRAMA
 
-// if (a > b && a > c) {
-//   console.log(a);
-// } else if (a === b && a === c) {
-//   console.log("São iguais");
-// } else if (b > a && b > c) {
-//   console.log(b);
-// } else {
-//   console.log(c);
-// }
+
+function maiorDe3Numeros(a, b, c) {
+
+}
+if (a > b && a > c) {
+  console.log(a);
+} else if (a === b && a === c) {
+  console.log("São iguais");
+} else if (b > a && b > c) {
+  console.log(b);
+} else {
+  console.log(c);
+}
 
 // // QUARTO PROGRAMA
 
