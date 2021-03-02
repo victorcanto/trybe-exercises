@@ -113,7 +113,7 @@ function checkMovePartChess(partName) {
   }
 }
 
-// // SÉTIMO PROGRAMA - 
+// // SÉTIMO PROGRAMA - REFATORADO
 
 function checkNote(nota) {
   if (nota >= 90 && nota <= 100) {
@@ -131,23 +131,15 @@ function checkNote(nota) {
   }
 }
 
-
-// // OITAVO PROGRAMA
-
-// let n1 = 2;
-// let n2 = 2;
-// let n3 = 2;
-// let modulen1 = n1 % 2;
-// let modulen2 = n2 % 2;
-// let modulen3 = n3 % 2;
-
-// somaModule = modulen1 + modulen2 + modulen3;
-
-// if(somaModule !== 3) {
-//   console.log(true); //Par
-// } else {
-//   console.log(false); //Impar
-// }
+// // OITAVO PROGRAMA - REFATORADO
+function checkNumbers(n1, n2, n3) {
+  let somaModule = (n1 % 2) + (n2 % 2) + (n3 % 2);
+  if (somaModule !== 3) {
+    console.log(true); //Par
+  } else {
+    console.log(false); //Impar
+  }
+}
 
 // // NONO PROGRAMA
 
