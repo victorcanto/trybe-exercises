@@ -22,7 +22,7 @@ function modulo(a, b) {
   return a % b;
 }
 
-// SEGUNDO PROGRAMA -REFATORADO
+// SEGUNDO PROGRAMA - REFATORADO
 
 function maiorNumero(a, b) {
   if (a > b) {
@@ -34,32 +34,31 @@ function maiorNumero(a, b) {
   }
 }
 
-// // TERCEIRO PROGRAMA
-
+// // TERCEIRO PROGRAMA - REFATORADO
 
 function maiorDe3Numeros(a, b, c) {
-
-}
-if (a > b && a > c) {
-  console.log(a);
-} else if (a === b && a === c) {
-  console.log("São iguais");
-} else if (b > a && b > c) {
-  console.log(b);
-} else {
-  console.log(c);
+  if (a > b && a > c) {
+    return a;
+  } else if (a === b && a === c) {
+    return "São iguais";
+  } else if (b > a && b > c) {
+    return b;
+  } else {
+    return c;
+  }
 }
 
 // // QUARTO PROGRAMA
 
-// let valorDef = 7;
-// if (valorDef > 0) {
-//   console.log("positive");
-// } else if (valorDef < 0) {
-//   console.log("negative");
-// } else {
-//   console.log("zero");
-// }
+function checkPositiveNumber(a) {
+  if (a > 0) {
+    return "positive";
+  } else if (a === 0) {
+    return "zero";
+  } else {
+    return "negative";
+  }
+}
 
 // // QUINTO PROGRAMA
 
