@@ -48,7 +48,7 @@ function maiorDe3Numeros(a, b, c) {
   }
 }
 
-// // QUARTO PROGRAMA
+// // QUARTO PROGRAMA - REFATORADO
 
 function checkPositiveNumber(a) {
   if (a > 0) {
@@ -62,19 +62,26 @@ function checkPositiveNumber(a) {
 
 // // QUINTO PROGRAMA
 
-// let a1 = 30;
-// let a2 = 50;
-// let a3 = 100;
+function checkTriangle(a1, a2, a3) {
+  let somaAngulos = a1 + a2 + a3;
+  if (somaAngulos === 180) {
+    return true;
+  } else if (somaAngulos < 0) {
+    return 'Error'
+  } else {
+    return false;
+  }
+}
 
-// let somaAngulos = a1 + a2 + a3;
+let somaAngulos = a1 + a2 + a3;
 
-// if (somaAngulos === 180) {
-//   console.log(true);
-// } else if (somaAngulos < 0) {
-//   console.log("Error");
-// } else {
-//   console.log(false);
-// }
+if (somaAngulos === 180) {
+  console.log(true);
+} else if (somaAngulos < 0) {
+  console.log("Error");
+} else {
+  console.log(false);
+}
 
 // // SEXTO PROGRAMA
 
