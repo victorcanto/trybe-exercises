@@ -1,4 +1,4 @@
-// Pegue cada um dos exercícios da primeira parte das nossas aulas de JavaScript e faça com que todos eles sejam funções de um mesmo arquivo. As variáveis que você define no começo de cada arquivo devem ser removidas e transformadas em parâmetros das funções. 
+// Pegue cada um dos exercícios da primeira parte das nossas aulas de JavaScript e faça com que todos eles sejam funções de um mesmo arquivo. As variáveis que você define no começo de cada arquivo devem ser removidas e transformadas em parâmetros das funções.
 
 // PRIMEIRO PROGRAMA - REFATORADO
 
@@ -22,98 +22,96 @@ function modulo(a, b) {
   return a % b;
 }
 
-console.log(soma(5, 3));
-console.log(substracao(8, 10));
-console.log(multiplicacao(9, 7));
-console.log(divisao(20, 2));
-console.log(modulo(5, 2));
+// SEGUNDO PROGRAMA - REFATORADO
 
-// SEGUNDO PROGRAMA
-// if (a > b) {
-//   console.log(a);
-// } else if (b > a) {
-//   console.log(b);
-// } else {
-//   console.log("São iguais");
-// }
+function maiorNumero(a, b) {
+  if (a > b) {
+    return a;
+  } else if (a < b) {
+    return b;
+  } else {
+    return "São iguais";
+  }
+}
 
-// // TERCEIRO PROGRAMA
+// // TERCEIRO PROGRAMA - REFATORADO
 
-// if (a > b && a > c) {
-//   console.log(a);
-// } else if (a === b && a === c) {
-//   console.log("São iguais");
-// } else if (b > a && b > c) {
-//   console.log(b);
-// } else {
-//   console.log(c);
-// }
+function maiorDe3Numeros(a, b, c) {
+  if (a > b && a > c) {
+    return a;
+  } else if (a === b && a === c) {
+    return "São iguais";
+  } else if (b > a && b > c) {
+    return b;
+  } else {
+    return c;
+  }
+}
 
-// // QUARTO PROGRAMA
+// // QUARTO PROGRAMA - REFATORADO
 
-// let valorDef = 7;
-// if (valorDef > 0) {
-//   console.log("positive");
-// } else if (valorDef < 0) {
-//   console.log("negative");
-// } else {
-//   console.log("zero");
-// }
+function checkPositiveNumber(a) {
+  if (a > 0) {
+    return "positive";
+  } else if (a === 0) {
+    return "zero";
+  } else {
+    return "negative";
+  }
+}
 
-// // QUINTO PROGRAMA
+// // QUINTO PROGRAMA - REFATORADO
 
-// let a1 = 30;
-// let a2 = 50;
-// let a3 = 100;
+function checkTriangle(a1, a2, a3) {
+  let somaAngulos = a1 + a2 + a3;
+  if (somaAngulos === 180) {
+    return true;
+  } else if (somaAngulos < 0) {
+    return "Error";
+  } else {
+    return false;
+  }
+}
 
-// let somaAngulos = a1 + a2 + a3;
+// // SEXTO PROGRAMA - REFATORADO
 
-// if (somaAngulos === 180) {
-//   console.log(true);
-// } else if (somaAngulos < 0) {
-//   console.log("Error");
-// } else {
-//   console.log(false);
-// }
+function checkMovePartChess(partName) {
+  let semAcento = partName.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  let convertPartName = semAcento.toLowerCase();
 
-// // SEXTO PROGRAMA
+  switch (convertPartName) {
+    case "rei":
+      console.log("Move-se em qualquer direção, uma casa por vez");
+      break;
 
-// let partName = "rei";
-// let semAcento = partName.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-// let convertPartName = semAcento.toLowerCase();
+    case "dama":
+      console.log(
+        "Move-se em qualquer direção, porém quantas casa quiser, desde que estejam livres"
+      );
+      break;
 
-// switch (convertPartName) {
-//   case "rei":
-//     console.log("Move-se em qualquer direção, uma casa por vez");
-//     break;
+    case "torre":
+      console.log(
+        "Move-se em linha reta, na vertical e horizontal, quantos casas quiser"
+      );
+      break;
 
-//   case "dama":
-//     console.log(
-//       "Move-se em qualquer direção, porém quantas casa quiser, desde que estejam livres"
-//     );
-//     break;
+    case "bispo":
+      console.log("Move-se na diagonal, quantas casas quiser");
+      break;
 
-//   case "torre":
-//     console.log(
-//       "Move-se em linha reta, na vertical e horizontal, quantos casas quiser"
-//     );
-//     break;
+    case "cavalo":
+      console.log("Movimento em L");
+      break;
 
-//   case "bispo":
-//     console.log("Move-se na diagonal, quantas casas quiser");
-//     break;
+    case "peao":
+      console.log("Move-se sempre uma casa a frente");
+      break;
 
-//   case "cavalo":
-//     console.log("Movimento em L");
-//     break;
-
-//   case "peao":
-//     console.log("Move-se sempre uma casa a frente");
-//     break;
-
-//   default:
-//     console.log("error, part is invalid");
-// }
+    default:
+      console.log("error, part is invalid");
+  }
+}
 
 // // SÉTIMO PROGRAMA
 
