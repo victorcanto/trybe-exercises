@@ -1,4 +1,4 @@
-// Pegue cada um dos exercícios da primeira parte das nossas aulas de JavaScript e faça com que todos eles sejam funções de um mesmo arquivo. As variáveis que você define no começo de cada arquivo devem ser removidas e transformadas em parâmetros das funções. 
+// Pegue cada um dos exercícios da primeira parte das nossas aulas de JavaScript e faça com que todos eles sejam funções de um mesmo arquivo. As variáveis que você define no começo de cada arquivo devem ser removidas e transformadas em parâmetros das funções.
 
 // PRIMEIRO PROGRAMA - REFATORADO
 
@@ -28,14 +28,17 @@ console.log(multiplicacao(9, 7));
 console.log(divisao(20, 2));
 console.log(modulo(5, 2));
 
-// SEGUNDO PROGRAMA
-// if (a > b) {
-//   console.log(a);
-// } else if (b > a) {
-//   console.log(b);
-// } else {
-//   console.log("São iguais");
-// }
+// SEGUNDO PROGRAMA -REFATORADO
+
+function maiorNumero(a, b) {
+  if (a > b) {
+    return a;
+  } else if (a < b) {
+    return b;
+  } else {
+    return "São iguais";
+  }
+}
 
 // // TERCEIRO PROGRAMA
 
