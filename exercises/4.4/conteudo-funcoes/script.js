@@ -113,69 +113,56 @@ function checkMovePartChess(partName) {
   }
 }
 
-// // SÉTIMO PROGRAMA
+// // SÉTIMO PROGRAMA - REFATORADO
 
-// nota = 97;
+function checkNote(nota) {
+  if (nota >= 90 && nota <= 100) {
+    console.log("A");
+  } else if (nota >= 80 && nota < 90) {
+    console.log("B");
+  } else if (nota >= 70 && nota < 80) {
+    console.log("C");
+  } else if (nota >= 60 && nota < 70) {
+    console.log("D");
+  } else if (nota >= 50 && nota < 60) {
+    console.log("F");
+  } else {
+    console.log("Error, is invalid nota");
+  }
+}
 
-// if (nota >= 90 && nota <= 100) {
-//   console.log("A");
-// } else if (nota >= 80 && nota < 90) {
-//   console.log("B");
-// } else if (nota >= 70 && nota < 80) {
-//   console.log("C");
-// } else if (nota >= 60 && nota < 70) {
-//   console.log("D");
-// } else if (nota >= 50 && nota < 60) {
-//   console.log("F");
-// } else {
-//   console.log("Error, is invalid nota");
-// }
+// // OITAVO PROGRAMA - REFATORADO
 
-// // OITAVO PROGRAMA
+function checkNumbersPar(n1, n2, n3) {
+  let somaModule = (n1 % 2) + (n2 % 2) + (n3 % 2);
+  if (somaModule !== 3) {
+    console.log(true); //Par
+  } else {
+    console.log(false); //Impar
+  }
+}
 
-// let n1 = 2;
-// let n2 = 2;
-// let n3 = 2;
-// let modulen1 = n1 % 2;
-// let modulen2 = n2 % 2;
-// let modulen3 = n3 % 2;
+// // NONO PROGRAMA - REFATORADO
 
-// somaModule = modulen1 + modulen2 + modulen3;
+function checkNumbersImpar(number1, number2, number3) {
+  let somaModuleNumber = (number1 % 2) + (number2 % 2) + (number3 % 2);
+  if (somaModuleNumber !== 0) {
+    console.log(true); //Impar
+  } else {
+    console.log(false); //Par
+  }
+}
 
-// if(somaModule !== 3) {
-//   console.log(true); //Par
-// } else {
-//   console.log(false); //Impar
-// }
+// // DÉCIMO PROGRAMA - REFATORADO
 
-// // NONO PROGRAMA
+function benefit(productCost, saleValue) {
+  let tax = (20 / 100) * productCost;
+  let valueCostTotal = productCost + tax;
+  let benefit = saleValue - valueCostTotal;
 
-// let number1 = 2;
-// let number2 = 2;
-// let number3 = 2;
-// let moduleNumber1 = number1 % 2;
-// let moduleNumber2 = number2 % 2;
-// let moduleNumber3 = number3 % 2;
-
-// somaModuleNumber = moduleNumber1 + moduleNumber2 + moduleNumber3;
-
-// if(somaModuleNumber !== 0) {
-//   console.log(true); //Impar
-// } else {
-//   console.log(false); //Par
-// }
-
-// // DÉCIMO PROGRAMA
-
-// let productCost = 1000;
-// let saleValue = 1200;
-// let tax = 20 / 100;
-
-// let valueCostTotal = productCost + tax;
-// let benefit = saleValue - valueCostTotal;
-
-// if(productCost >= 0 && saleValue >= 0) {
-//   console.log(benefit);
-// } else {
-//   console.log('Error, enter valid values');
-// }
+  if (productCost >= 0 && saleValue >= 0) {
+    console.log(benefit);
+  } else {
+    console.log("Error, enter valid values");
+  }
+}
