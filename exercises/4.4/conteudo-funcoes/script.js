@@ -76,8 +76,7 @@ function checkTriangle(a1, a2, a3) {
 // // SEXTO PROGRAMA - REFATORADO
 
 function checkMovePartChess(partName) {
-  let partNameString = partName.toString();
-  let semAcento = partNameString.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  let semAcento = partName.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let convertPartName = semAcento.toLowerCase();
 
   switch (convertPartName) {
