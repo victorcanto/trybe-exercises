@@ -132,7 +132,8 @@ function checkNote(nota) {
 }
 
 // // OITAVO PROGRAMA - REFATORADO
-function checkNumbers(n1, n2, n3) {
+
+function checkNumbersPar(n1, n2, n3) {
   let somaModule = (n1 % 2) + (n2 % 2) + (n3 % 2);
   if (somaModule !== 3) {
     console.log(true); //Par
@@ -141,24 +142,18 @@ function checkNumbers(n1, n2, n3) {
   }
 }
 
-// // NONO PROGRAMA
+// // NONO PROGRAMA - REFATORADO
 
-// let number1 = 2;
-// let number2 = 2;
-// let number3 = 2;
-// let moduleNumber1 = number1 % 2;
-// let moduleNumber2 = number2 % 2;
-// let moduleNumber3 = number3 % 2;
+function checkNumbersImpar(number1, number2, number3) {
+  let somaModuleNumber = (number1 % 2) + (number2 % 2) + (number3 % 2);
+  if (somaModuleNumber !== 0) {
+    console.log(true); //Impar
+  } else {
+    console.log(false); //Par
+  }
+}
 
-// somaModuleNumber = moduleNumber1 + moduleNumber2 + moduleNumber3;
-
-// if(somaModuleNumber !== 0) {
-//   console.log(true); //Impar
-// } else {
-//   console.log(false); //Par
-// }
-
-// // DÉCIMO PROGRAMA
+// // DÉCIMO PROGRAMA - REFATORADO
 
 // let productCost = 1000;
 // let saleValue = 1200;
