@@ -60,67 +60,59 @@ function checkPositiveNumber(a) {
   }
 }
 
-// // QUINTO PROGRAMA
+// // QUINTO PROGRAMA - REFATORADO
 
 function checkTriangle(a1, a2, a3) {
   let somaAngulos = a1 + a2 + a3;
   if (somaAngulos === 180) {
     return true;
   } else if (somaAngulos < 0) {
-    return 'Error'
+    return "Error";
   } else {
     return false;
   }
 }
 
-let somaAngulos = a1 + a2 + a3;
+// // SEXTO PROGRAMA - REFATORADO
 
-if (somaAngulos === 180) {
-  console.log(true);
-} else if (somaAngulos < 0) {
-  console.log("Error");
-} else {
-  console.log(false);
+function checkMovePartChess(partName) {
+  let partNameString = partName.toString();
+  let semAcento = partNameString.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  let convertPartName = semAcento.toLowerCase();
+
+  switch (convertPartName) {
+    case "rei":
+      console.log("Move-se em qualquer direção, uma casa por vez");
+      break;
+
+    case "dama":
+      console.log(
+        "Move-se em qualquer direção, porém quantas casa quiser, desde que estejam livres"
+      );
+      break;
+
+    case "torre":
+      console.log(
+        "Move-se em linha reta, na vertical e horizontal, quantos casas quiser"
+      );
+      break;
+
+    case "bispo":
+      console.log("Move-se na diagonal, quantas casas quiser");
+      break;
+
+    case "cavalo":
+      console.log("Movimento em L");
+      break;
+
+    case "peao":
+      console.log("Move-se sempre uma casa a frente");
+      break;
+
+    default:
+      console.log("error, part is invalid");
+  }
 }
-
-// // SEXTO PROGRAMA
-
-// let partName = "rei";
-// let semAcento = partName.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-// let convertPartName = semAcento.toLowerCase();
-
-// switch (convertPartName) {
-//   case "rei":
-//     console.log("Move-se em qualquer direção, uma casa por vez");
-//     break;
-
-//   case "dama":
-//     console.log(
-//       "Move-se em qualquer direção, porém quantas casa quiser, desde que estejam livres"
-//     );
-//     break;
-
-//   case "torre":
-//     console.log(
-//       "Move-se em linha reta, na vertical e horizontal, quantos casas quiser"
-//     );
-//     break;
-
-//   case "bispo":
-//     console.log("Move-se na diagonal, quantas casas quiser");
-//     break;
-
-//   case "cavalo":
-//     console.log("Movimento em L");
-//     break;
-
-//   case "peao":
-//     console.log("Move-se sempre uma casa a frente");
-//     break;
-
-//   default:
-//     console.log("error, part is invalid");
-// }
 
 // // SÉTIMO PROGRAMA
 
