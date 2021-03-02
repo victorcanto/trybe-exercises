@@ -155,15 +155,14 @@ function checkNumbersImpar(number1, number2, number3) {
 
 // // DÉCIMO PROGRAMA - REFATORADO
 
-// let productCost = 1000;
-// let saleValue = 1200;
-// let tax = 20 / 100;
+function benefit(productCost, saleValue) {
+  let tax = (20 / 100) * productCost;
+  let valueCostTotal = productCost + tax;
+  let benefit = saleValue - valueCostTotal;
 
-// let valueCostTotal = productCost + tax;
-// let benefit = saleValue - valueCostTotal;
-
-// if(productCost >= 0 && saleValue >= 0) {
-//   console.log(benefit);
-// } else {
-//   console.log('Error, enter valid values');
-// }
+  if (productCost >= 0 && saleValue >= 0) {
+    console.log(benefit);
+  } else {
+    console.log("Error, enter valid values");
+  }
+}
