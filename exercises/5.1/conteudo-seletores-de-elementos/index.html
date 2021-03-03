@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercice5.1 - Seletores de Elemento</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
   <body>
     <h2 id="page-title">Título</h2>
-    <p id="paragraph">Dê uma cor para este parágrafo!</p>
+    <p id="paragraph" class="bgreen-italic">Dê uma cor para este parágrafo!</p>
     <h4 id="subtitle">Subtítulo</h4>
-    <p id="second-paragraph">Segundo parágrafo!</p>
+    <p id="second-paragraph" class="bgreen-italic">Segundo parágrafo!</p>
 
-    <script>
-      var paragraph = document.getElementById("paragraph");
-        paragraph.style.color = "red";
-      var pageTitle = document.getElementById("page-title");
-        pageTitle.innerHTML = "<h2>Matrix</2>";
-      var secondParagraph = document.getElementById("second-paragraph");
-          secondParagraph.innerHTML = "<p>O melhor sobre robos da época.</p>"
-      var subtitle = document.getElementById("subtitle");
-      subtitle.innerHTML = "<p>I'am Neo!</p>"
-    </script>
+    <script src="./script.js""></script>
   </body>
 </html>
