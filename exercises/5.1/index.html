@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito</h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+      /*
+             Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+             - document.getElementById()
+             - document.getElementsByClassName()
+             - document.getElementsByTagName()
+      Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+      Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+      Crie uma função que mude a cor do quadrado vermelho para branco.
+      Crie uma função que corrija o texto da tag <h1>.
+      Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+      Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+             */
+      // Exercise 1
+      function changeDescription() {
+        let description = document.getElementsByTagName("p");
+        description[1].innerHTML = "Estar independente financeiramente";
+      }
+      changeDescription();
+      // Exercise 2
+      function changeColorTrybe() {
+        let customColor = document.getElementsByClassName("main-content");
+        customColor[0].style.backgroundColor = "rgb(76,164,109)";
+      }
+      changeColorTrybe();
+      // Exercise 3
+      function changeColorWhite() {
+        let colorWhite = document.getElementsByClassName("center-content");
+        colorWhite[0].style.backgroundColor = "white";
+      }
+      changeColorWhite();
+      // Exercise 4
+      function correctTitle() {
+        let correctTitle = document.getElementsByClassName("title");
+        correctTitle[0].innerText = "Exercício 5.1 - JavaScript";
+      }
+      correctTitle();
+      // Exercise 5
+      function modTextTagP() {
+        let modTextTagP = document.getElementsByTagName("p");
+        modTextTagP[0].innerHTML = modTextTagP[0].innerHTML.toUpperCase();
+      }
+      modTextTagP();
+      // Exercise 6
+      function printContent() {
+        let contentTagP = document.getElementsByTagName("p");
+        for (
+          let indexContent = 0;
+          indexContent < contentTagP.length;
+          indexContent += 1
+        ) {
+          console.log(contentTagP[indexContent].innerHTML);
+        }
+      }
+      printContent();
+    </script>
+  </body>
+</html>
