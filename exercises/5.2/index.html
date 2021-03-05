@@ -58,9 +58,14 @@
   <body>
     <script>
       let title = document.createElement("h1");
-      document.body.appendChild(title)
+      document.body.appendChild(title);
       title.innerText = "Exercício 5.2 - JavaScript DOM";
-     
+      title.id = "main-title";
+
+      let mainContent = document.createElement("div");
+      document.body.appendChild(mainContent);
+      mainContent.className = "main-content";
+
     </script>
   </body>
 </html>
