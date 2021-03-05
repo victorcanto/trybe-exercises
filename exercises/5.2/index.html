@@ -85,9 +85,18 @@
 
       let img = document.createElement("img");
       leftContent.appendChild(img);
-      img.src = "https://picsum.photos/200"
+      img.src = "https://picsum.photos/200";
       img.className = "small-image";
 
+      let list = document.createElement("ul");
+      rightContent.appendChild(list);
+
+      for (let index = 1; index <= 10; index += 1) {
+        let listItem = document.createElement("li");
+        list.appendChild(listItem);
+        listItem.innerHTML = listItem.innerHTML + index;
+      }
+      
     </script>
   </body>
 </html>
