@@ -88,3 +88,34 @@ function createDayOfCalendary() {
   }
 }
 createDayOfCalendary();
+
+// Exercicio 2
+
+function createButton(str) {
+  let btnHoliday = document.createElement("button");
+  let buttonContainer = document.querySelector(".buttons-container");
+  btnHoliday.innerHTML = str;
+  btnHoliday.id = "btn-holiday";
+  buttonContainer.appendChild(btnHoliday);
+}
+createButton("Feriados");
+
+// Exercicio 3
+
+function changeColorDay() {
+  let dayHoliday = document.querySelectorAll(".holiday");
+  let buttonHoliday = document.getElementById("btn-holiday");
+  let colorDay = "yellow";
+  let defautColorBtn = "rgb(238,238,238)";
+
+  buttonHoliday.addEventListener("click", function () {
+    for (let index = 0; index < dayHoliday.length; index += 1) {
+      if (dayHoliday[index].style.backgroundColor === colorDay) {
+        dayHoliday[index].style.backgroundColor = defautColorBtn;
+      } else {
+        dayHoliday[index].style.backgroundColor = colorDay;
+      }
+    }
+  });
+}
+changeColorDay();
