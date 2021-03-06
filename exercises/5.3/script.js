@@ -91,14 +91,15 @@ createDayOfCalendary();
 
 // Exercicio 2
 
-function createButton(str) {
+const buttonContainer = document.querySelector(".buttons-container");
+
+function createBtnHoliday(str) {
   let btnHoliday = document.createElement("button");
-  let buttonContainer = document.querySelector(".buttons-container");
   btnHoliday.innerHTML = str;
   btnHoliday.id = "btn-holiday";
   buttonContainer.appendChild(btnHoliday);
 }
-createButton("Feriados");
+createBtnHoliday("Feriados");
 
 // Exercicio 3
 
@@ -119,3 +120,13 @@ function changeColorDay() {
   });
 }
 changeColorDay();
+
+// Exercicio 4
+
+function createBtnFriday(str) {
+  let btnFriday = document.createElement("button");
+  btnFriday.id = "btn-friday";
+  btnFriday.innerHTML = str;
+  buttonContainer.appendChild(btnFriday);
+}
+createBtnFriday("Sexta-feira");
