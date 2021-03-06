@@ -130,3 +130,23 @@ function createBtnFriday(str) {
   buttonContainer.appendChild(btnFriday);
 }
 createBtnFriday("Sexta-feira");
+
+// Exercicio 5
+const dezFridays = [4, 11, 18, 25];
+
+function changeTextFriday(arrFridays) {
+  let fridayDay = document.querySelectorAll(".friday");
+  let buttonFriday = document.getElementById("btn-friday");
+  let newTextFriday = "Sextouu!";
+
+  buttonFriday.addEventListener("click", function () {
+    for (let index = 0; index < fridayDay.length; index += 1) {
+      if (fridayDay[index].innerHTML === newTextFriday) {
+        fridayDay[index].innerHTML = arrFridays[index];
+      } else {
+        fridayDay[index].innerHTML = newTextFriday;
+      }
+    }
+  });
+}
+changeTextFriday(dezFridays);
