@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise/6.1</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <form action="" method="POST" id="form" name="form">
+    <fieldset>
+      <legend>Informações pessoais</legend>
+      <div>
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Digite seu nome" required maxlength="40" />
+      </div>
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required maxlength="50">
+      </div>
+      <div>
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" required maxlength="11">
+      </div>
+      <div>
+        <label for="address">Endereço</label>
+        <input type="text" name="address" id="address" placeholder="Digite seu endereço" required maxlength="200">
+      </div>
+      <div>
+        <label for="city">Cidade</label>
+        <input type="text" name="city" id="city" placeholder="Digite o nome da sua cidade" required maxlength="28">
+      </div>
+      <div>
+        <label for="state">Estado</label>
+        <select name="state" id="state" required></select>
+      </div>
+      <div>
+        <label for="complement">Complemento:</label>
+        <input type="radio" name="complement" id="complement" value="casa" required>Casa
+        <input type="radio" name="complement" id="complement" value="apartamento" required>Apartamento
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Informações profissionais</legend>
+      <div>
+        <label for="resume">Resumo</label>
+        <textarea name="resume" id="resume" cols="100" rows="10" maxlength="1000" required placeholder="Digite um breve resumo da sua última experiência de trabalho"></textarea>
+      </div>
+      <div>
+        <label for="office">Cargo</label>
+        <input type="text" name="office" id="office" required maxlength="40">
+      </div>
+      <div>
+        <label for="job_description">Descrição do Cargo</label>
+        <input type="text" name="job_description" id="job_description" required maxlength="500">
+      </div>
+      <div>
+        <label for="start_date">Data de Início</label>
+        <input type="text" name="start_date" id="start_date" maxlength="10" required>
+      </div>
+    </fieldset>
+    <div>
+      <button type="submit" id="submit">Gerar CV</button>
+      <button type="reset" id="reset">Limpar</button>
+    </div>
+  </form>
+  <div id="div_form_data"></div>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+fieldset div {
+  margin: 10px 5px;
+  display: inline-block;
+}
+#submit {
+  margin: 10px 5px;
+  background-color: greenyellow;
+  font-size: 15px;
+}
+#reset {
+  margin: 10px 5px;
+  background-color: orange;
+  font-size: 15px;
+}
