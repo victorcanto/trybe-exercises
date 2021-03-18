@@ -15,13 +15,13 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 1-4: _Unix & Bash - Part 2_
 - [X] 1-5: _Shell Script_
 
-##### Bloco 2: Git & GitHub e Internet
+##### Bloco 2: Git & GitHub e Internet :white_check_mark:
 
 - [X] 2-1: _O que são e para que serve?_
 - [X] 2-2: _Entendendo os comandos_
 - [X] 2-3: _Internet - Entendendo como ela funciona_
 
-##### Bloco 3: Introdução - HTML & CSS
+##### Bloco 3: Introdução - HTML & CSS :white_check_mark:
 
 - [X] 3-1: _HTML & CSS - Estruturas de página_
 - [X] 3-2: _HTML & CSS - Primeiros passos em CSS_
@@ -29,7 +29,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 3-4: _HTML Semântico_
 - [X] 3-5: _[Projeto - Lessons Learned](https://github.com/victorcanto/trybe-projects/tree/main/html-css-js/project-01-lessons-learned)_
 
-##### Bloco 4: Introdução - JavaScript - Lógica de Programação
+##### Bloco 4: Introdução - JavaScript - Lógica de Programação :white_check_mark:
 
 - [X] 4-1: _JavaScript - Primeiros passos_
 - [X] 4-2: _JavaScript - Array e loop For_
@@ -37,11 +37,19 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 4-4: _JavaScript - Objetos e funções_
 - [X] 4-5: [Projeto - Playground Functions](link indisponível no momento)
 
-##### Bloco 5: JavaScript - DOM, Eventos e Web Storage
+##### Bloco 5: JavaScript - DOM, Eventos e Web Storage :white_check_mark:
 - [X] 5-1: _JavaScript - DOM e Seletores_
 - [X] 5-2: _JavaScript - Trabalhando com elementos_
-- [ ] 5-3: _JavaScript - Eventos_
-- [ ] 5-4: _JavaScript - Web Storage_
-- [ ] 5-5: _Fundamentos - JavaScript - Projetos_
-- [ ] 
+- [X] 5-3: _JavaScript - Eventos_
+- [X] 5-4: _JavaScript - Web Storage_
+- [X] 5-5: [Projeto Pixel Arts](link indisponível no momento)
+- [X] 5-6: [Projeto Lista de Tarefas](link indisponível no momento)
+
+##### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo
+- [X] 6-1: _HTML & CSS - Forms_
+- [X] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
+- [X] 6-3: _CSS Flexbox - Parte 1_
+- [ ] 6-4: _CSS Flexbox - Parte 2_
+- [ ] 6-5: _CSS Responsivo - Mobile First_
+- [ ] 6-6: [Projeto Página Inicial do Facebook](link indisponivel no momento)
 
