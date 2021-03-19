@@ -6,13 +6,18 @@ h1 {
   font-size: 1.3rem;
 }
 h2 {
-
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 figure {
-    margin: 20px 0;
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 460px) {
+  body {
+    background-color: #edf2f4;
+  }
 }
