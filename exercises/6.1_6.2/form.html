@@ -13,56 +13,56 @@
 </head>
 <body>
   <div class="container-fluid">
-    <form action="" method="POST" id="form" name="form">
+    <form class="js-form form" action="" method="POST" id="form" name="form">
       <fieldset>
         <legend>Informações pessoais</legend>
         <div>
           <label class="form-label" for="name">Nome</label>
-          <input class="form-control" type="text" id="name" name="name" placeholder="Digite seu nome" required maxlength="40" />
+          <input class="form__input form-control" type="text" id="name" name="name" placeholder="Digite seu nome" autocomplete="off" data-validate-field="name" required maxlength="40" />
         </div>
         <div>
           <label class="form-label" for="email">E-mail</label>
-          <input class="form-control" type="email" name="email" id="email" placeholder="Digite seu e-mail" required maxlength="50">
+          <input class="form-input form-control" type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="off" data-validate-field="email" required maxlength="50">
         </div>
         <div>
           <label class="form-label" for="cpf">CPF</label>
-          <input class="form-control" type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" required maxlength="11">
+          <input class="form__input form-control" type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" autocomplete="off" data-validate-field="text" required maxlength="11">
         </div>
         <div>
           <label class="form-label" for="address">Endereço</label>
-          <input class="form-control" type="text" name="address" id="address" placeholder="Digite seu endereço" required maxlength="200">
+          <input class="form__input form-control" type="text" name="address" id="address" placeholder="Digite seu endereço Ex: Rua do Brasil, n47" autocomplete="off" data-validate-field="text" required maxlength="200">
         </div>
         <div>
           <label class="form-label" for="city">Cidade</label>
-          <input class="form-control" type="text" name="city" id="city" placeholder="Digite o nome da sua cidade" required maxlength="28">
+          <input class="form__input form-control" type="text" name="city" id="city" placeholder="Digite o nome da sua cidade" autocomplete="off" data-validate-field="text" required maxlength="28">
         </div>
         <div>
           <label class="form-label" for="state">Estado</label>
-          <select class="form-select" name="state" id="state" required></select>
+          <select class="form__select form-select" name="state" id="state" data-validate-field="select" required></select>
         </div>
         <div>
-          <label class="form-check-label form-label" for="complement">Complemento:</label>
-          <input class="form-check-input"  type="radio" name="complement" id="complement" value="casa" required>Casa
-          <input class="form-check-input" type="radio" name="complement" id="complement" value="apartamento" required>Apartamento
+          <label class="form-check-label form-label" for="complement_type">Complemento:</label>
+          <input class="form__radio form-check-input" data-validate-field="radio"  type="radio" name="complement_type" id="complement_type" value="casa" required>Casa
+          <input class="form__radio form-check-input" data-validate-field="radio" type="radio" name="complement_type" id="complement_type" value="apartamento" required>Apartamento
         </div>
       </fieldset>
       <fieldset>
         <legend>Informações profissionais</legend>
         <div>
           <label class="form-label" for="resume">Resumo</label>
-          <textarea class="form-control" name="resume" id="resume" cols="100" rows="10" maxlength="1000" required placeholder="Digite um breve resumo da sua última experiência de trabalho"></textarea>
+          <textarea class="form__textarea form-control" name="resume" id="resume" cols="100" rows="10" maxlength="1000" required placeholder="Digite um breve resumo da sua última experiência de trabalho" data-validate-field="text"></textarea>
         </div>
         <div>
           <label class="form-label" for="office">Cargo</label>
-          <input class="form-control" type="text" name="office" id="office" placeholder="Digite seu cargo" required maxlength="40">
+          <input class="form__input form-control" type="text" name="office" id="office" placeholder="Digite seu cargo" autocomplete="off" data-validate-field="text" required maxlength="40">
         </div>
         <div>
           <label class="form-label" for="job_description">Descrição do Cargo</label>
-          <input class="form-control" type="text" name="job_description" id="job_description" placeholder="Digite a descrição do cargo" required maxlength="500">
+          <input class="form_input form-control" type="text" name="job_description" id="job_description" placeholder="Digite a descrição do cargo" autocomplete="off" data-validate-field="text" required maxlength="500">
         </div>
         <div>
           <label class="form-label" for="datepicker">Data de Início</label>
-          <input class="form-control" type="text" name="start_date" id="datepicker" placeholder="Escolha a data" maxlength="10" required>
+          <input class="form-control" type="text" name="start_date" id="datepicker" placeholder="Escolha a data" autocomplete="off" maxlength="10" required>
         </div>
       </fieldset>
       <div>
@@ -74,5 +74,6 @@
   <div id="div_form_data"></div>
   <script src="./script.js"></script>
   <script src="./node_modules/pikaday/pikaday.js"></script>
+  <script src="./node_modules/just-validate/dist/js/just-validate.min.js"></script>
 </body>
 </html>

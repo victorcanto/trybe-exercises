@@ -1,7 +1,3 @@
-function pikaday() {
-  var picker = new Pikaday({ field: document.getElementById("datepicker") });
-}
-
 const state = document.getElementById("state");
 const brazilStates = {
   "": "Selecione seu estado",
@@ -44,28 +40,25 @@ function selectState() {
   }
 }
 
-function checkAllData() {
-  const inputs = document.querySelectorAll("input");
-  for (let index = 0; index < inputs.length; index += 1) {
-    const allData = inputs[index].value;
-    if (allData == "") {
-      alert("Informações faltando, verifique se há algum campo vazio");
-      return false;
-    }
-    return allData;
-  }
+function pikaday() {
+  var picker = new Pikaday({ field: document.getElementById("datepicker") });
+}
+
+function validate() {
+  var dataValidate = new window.JustValidate(".js-form");
 }
 
 function createDivFormData(e) {
   e.preventDefault();
+
   const inputs = document.querySelectorAll("input");
   const divFormData = document.getElementById("div_form_data");
   for (let index = 0; index < inputs.length; index += 1) {
     if (inputs[index].type === "radio" && !inputs[index].checked) {
       continue;
     }
-    const userData = inputs[index].value;
-    if (checkAllData() && pikaday()) {
+    if (validate()) {
+      const userData = inputs[index].value;
       const divConsolidation = document.createElement("div");
       divConsolidation.innerHTML = userData;
       divFormData.appendChild(divConsolidation);
