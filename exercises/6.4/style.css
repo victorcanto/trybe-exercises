@@ -22,10 +22,14 @@ body {
 }
 
 .menu-container {
-  min-width: 768px;
   display: flex;
   flex-basis: 500px;
-  flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    flex: 1;
+  }
 }
 
 .menu-container ul {
