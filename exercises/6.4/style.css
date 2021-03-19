@@ -55,6 +55,10 @@ body {
   flex-grow: 10;
 }
 
+.movie-container div {
+  flex: 1;
+}
+
 .movie-container h2 {
   margin: 40px 0;
   text-align: center;
