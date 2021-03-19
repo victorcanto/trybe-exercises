@@ -22,8 +22,10 @@ body {
 }
 
 .menu-container {
+  min-width: 768px;
   display: flex;
   flex-basis: 500px;
+  flex-grow: 1;
 }
 
 .menu-container ul {
