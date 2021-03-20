@@ -45,12 +45,17 @@ figure {
   }
 
   .box-columns figure img {
-    width: 95%;
-    align-self: center;
+    width: 200px;
+    align-self: flex-start;
   }
-  
+
   .box-columns figure figcaption {
-    margin-top: 5px ;
-    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 939px) {
+  body {
+    background-color: #e9ecef;
   }
 }
