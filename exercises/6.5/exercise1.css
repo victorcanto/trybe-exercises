@@ -59,6 +59,7 @@ figure {
     background-color: #e9ecef;
     font-size: 1.4rem;
     margin: 10px 15px;
+    max-width: 1307px;
   }
 
   h1 {
@@ -67,5 +68,9 @@ figure {
 
   h2 {
     font-size: 1.79rem;
+  }
+
+  .box-columns figure img {
+    width: 300px;
   }
 }
