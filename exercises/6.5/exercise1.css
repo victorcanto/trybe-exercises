@@ -30,4 +30,27 @@ figure {
   h2 {
     font-size: 1.45rem;
   }
+
+  .box-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .box-columns figure {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+
+  .box-columns figure img {
+    width: 95%;
+    align-self: center;
+  }
+  
+  .box-columns figure figcaption {
+    margin-top: 5px ;
+    text-align: center;
+  }
 }
