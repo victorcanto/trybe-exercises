@@ -57,5 +57,14 @@ figure {
 @media screen and (min-width: 939px) {
   body {
     background-color: #e9ecef;
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.79rem;
   }
 }
