@@ -14,13 +14,15 @@ const biggestWord = (phrase) => {
   let bigWord = "";
   const arrPharse = phrase.split(" ");
   for (let index = 0; index < arrPharse.length; index += 1) {
-    if (arrPharse[index].trim().length > bigWord.length) {
+    if (arrPharse[index].trim().length > bigWord.trim().length) {
       bigWord = arrPharse[index].trim();
-      console.log(bigWord);
     }
   }
+  return bigWord;
 };
-biggestWord("Antônio foi no banheiro e não sabemos o que aconteceu");
+console.log(
+  biggestWord("Antônio foi no banheiro e não sabemos o que aconteceu")
+);
 
 // PartII.3
 let clickCount = 0;
@@ -49,7 +51,9 @@ const skills = [
 
 const showMessage = (str) => {
   const sort = skills.sort();
-  const newMessage = `${strX(str)} Minhas cinco principais habilidades são: ${sort} #goTrybe.`;
+  const newMessage = `${strX(
+    str
+  )} Minhas cinco principais habilidades são: ${sort} #goTrybe.`;
   return newMessage;
 };
 
