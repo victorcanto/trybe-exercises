@@ -4,8 +4,9 @@ const checkBet = (bet, numberDrawn) => {
 
 const drawNumbers = (bet, checkBet) => {
   const numberDrawn = Math.floor(Math.random() * 5) + 1;
-  if (checkBet(bet, numberDrawn)) return "Parabéns, você ganhou!";
-  return "Tente novamente";
+  return checkBet(bet, numberDrawn)
+    ? "Parabéns, você ganhou!"
+    : "Tente novamente";
 };
 
 console.log(drawNumbers(2, checkBet));
