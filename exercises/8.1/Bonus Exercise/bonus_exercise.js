@@ -26,11 +26,8 @@ const dragonDamage = () => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
   const damageValue = getRandomInt(15, dragon.strength);
-  dragon.damage = damageValue;
   return damageValue;
 };
-
-dragonDamage();
 
 const warriorDamage = () => {
   const getRandomInt = (min, max) => {
@@ -40,11 +37,8 @@ const warriorDamage = () => {
     warrior.strength,
     warrior.strength * warrior.weaponDmg
   );
-  warrior.damage = damageValue;
   return damageValue;
 };
-
-warriorDamage();
 
 const mageDamage = () => {
   const getRandomInt = (min, max) => {
@@ -52,15 +46,18 @@ const mageDamage = () => {
   };
   const damageValue = getRandomInt(mage.intelligence, mage.intelligence * 2);
 
-  const mana = mage.mana;
-
   const mageStatus = { damage: damageValue, consumedMana: 15 };
 
-  if(mana < 15) {
+  if (mage.mana < 15) {
     mageStatus.damage = 0;
     mageStatus.consumedMana = 0;
   }
   return mageStatus;
 };
 
-console.log(mageDamage());
+const gameActions = {
+  warriorTurn: (warriorDamage) => {
+    warrior.damage = warriorDamage();
+    dragon.healthPoints -= warrior.damage;
+  },
+};
