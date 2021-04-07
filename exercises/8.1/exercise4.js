@@ -4,13 +4,11 @@ const studentAnswers = ["A", "N.A", "B", "D", "A", "C", "N.A", "A", "D", "B"];
 const checkAnswers = (feedback, answers) => {
   let sum = 0;
   for (let index = 0; index < feedback.length; index += 1) {
-    if (feedback[index] === answers[index]) {
-      sum += 1;
-    } else if (answers[index] === "N.A") {
-      sum += 0;
-    } else {
-      sum -= 0.5;
-    }
+    feedback[index] === answers[index]
+      ? (sum += 1)
+      : answers[index] === "N.A"
+      ? (sum += 0)
+      : (sum -= 0.5);
   }
   return sum;
 };
