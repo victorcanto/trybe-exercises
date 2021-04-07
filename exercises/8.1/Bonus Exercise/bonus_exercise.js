@@ -32,3 +32,16 @@ const dragonDamage = () => {
 
 dragonDamage();
 
+const warriorDamage = () => {
+  const getRandomInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+  const damageValue = getRandomInt(
+    warrior.strength,
+    warrior.strength * warrior.weaponDmg
+  );
+  warrior.damage = damageValue;
+  return damageValue;
+};
+
+warriorDamage();
