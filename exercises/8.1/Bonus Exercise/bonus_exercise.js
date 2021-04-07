@@ -45,3 +45,22 @@ const warriorDamage = () => {
 };
 
 warriorDamage();
+
+const mageDamage = () => {
+  const getRandomInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+  const damageValue = getRandomInt(mage.intelligence, mage.intelligence * 2);
+
+  const mana = mage.mana;
+
+  const mageStatus = { damage: damageValue, consumedMana: 15 };
+
+  if(mana < 15) {
+    mageStatus.damage = 0;
+    mageStatus.consumedMana = 0;
+  }
+  return mageStatus;
+};
+
+console.log(mageDamage());
