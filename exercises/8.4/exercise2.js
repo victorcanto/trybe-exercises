@@ -65,10 +65,9 @@ const books = [
 
 function allNames() {
   const strNames = books.reduce((acc, book, index, arr) => {
-    if (index === arr.length - 1) {
-      return `${acc} ${book.author.name}.`;
-    }
-    return `${acc} ${book.author.name},`;
+    return index === arr.length - 1
+      ? `${acc} ${book.author.name}.`
+      : `${acc} ${book.author.name},`;
   }, "Nomes:");
   return strNames;
 }
