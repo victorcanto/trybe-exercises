@@ -28,3 +28,7 @@ const addMorningShift = (obj, key, value) => {
 
 console.log(addMorningShift(lesson2, newKey, turno));
 
+const listObjKeys = (obj) => {
+  return Object.keys(obj);
+}
+console.log(listObjKeys(lesson1));
