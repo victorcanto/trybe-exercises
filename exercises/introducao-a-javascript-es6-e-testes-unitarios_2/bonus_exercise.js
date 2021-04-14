@@ -31,3 +31,19 @@ const countStudentsWhoAttendedClasse = (obj) => {
   return total;
 };
 console.log(countStudentsWhoAttendedClasse(allLessons));
+
+const getReportObj = (obj, teacher) => {
+  const keys = Object.keys(obj);
+  const report = { professor: '', aulas: [], estudantes: 0 }
+  let total = 0
+  for(let idx in keys) {
+    if(obj[keys[idx]].professor === teacher) {
+      total += obj[keys[idx]].numeroEstudantes;
+     report.professor = obj[keys[idx]].professor;
+     report.aulas.push(obj[keys[idx]].materia);
+     report.estudantes = total
+    } 
+  }
+  return report;
+}
+console.log(getReportObj(allLessons, 'Maria Clara'));
