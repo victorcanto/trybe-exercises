@@ -36,3 +36,8 @@ const showSizeObj = (obj) => {
   return Object.keys(obj).length;
 }
 console.log(showSizeObj(lesson2));
+
+const listObjValues = (obj) => {
+  return Object.values(obj);
+}
+console.log(listObjValues(lesson3));
