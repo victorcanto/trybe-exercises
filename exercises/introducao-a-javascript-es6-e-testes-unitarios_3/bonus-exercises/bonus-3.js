@@ -12,5 +12,6 @@ const expectedWords = ['mouse', 'giraffe', 'window', 'bottle'];
 const expectedOutput = ['queen'];
 const output = removeMiddle(words);
 
+assert.strictEqual(typeof removeMiddle, 'function');
 assert.deepStrictEqual(output, expectedOutput);
 assert.deepStrictEqual(words, expectedWords);
