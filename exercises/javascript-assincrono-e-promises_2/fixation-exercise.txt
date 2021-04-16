@@ -1,0 +1,26 @@
+1 - O que é um código que é executado de modo assíncrono? Qual é a diferença disso para um código que é executado de modo síncrono?
+
+R: É um código que não possui codepêndencia com outro código, exemplo: Uma função não precisa necessariamente esperar o retorno de outra função para realizar sua operação. Ela pode fazer sua parte enquanto a outra termina. 
+
+Já o código executado de forma síncrona, depende do resultado de outra função, tem que obrigatoriamente esperar o retorno da outra função para iniciar sua operação.
+
+2 - Quando você tem que enfileirar várias callbacks , que problema surge?
+
+R: O primeiro callback que entra na fila especial não é o mesmo callback que sai, a area especial das funções assincronas não é muito ordenada, por que depende do tempo de execução de cada uma. Por isso há um descontrole na sequencia de callbacks, surgino o chamado 'callbacks hell';
+
+
+3 - Por que as Promises são uma forma de se resolver esse problema?
+
+R: Elas também são assíncronas, elas tem especialidades extras que dão ao programador maior controle do fluxo assíncrono, e elas são construídas de forma distinta, usando um Construtor. As Promises possuem ferramentas para o melhor gerenciamento do fluxo assincrono.
+
+
+4 - Quando você vai se comunicar com uma API , tal comunicação deve ser síncrona ou assíncrona? Lembre-se de que o serviço ao qual você está se conectando pode demorar muito ou pouco para dar retorno, pode estar fora do ar etc.
+
+R: Deve ser assincrona, para que as funções possam ser executas sem depender do retorno de outra, enquanto aguarda o recebimento dos dados.
+
+
+5 - Dada a resposta anterior, o que é fetch e para que ele serve?
+
+R: Fetch é uma função da Fetch API, que conta com recursos desenvolvidos para lidar com requisições http no Javascript.
+
+Ela é responsável por enviar requisições a APIs. Também possui ferramentas para tratar os dados recebidos, devolvê-los e ainda lidar com os erros.
