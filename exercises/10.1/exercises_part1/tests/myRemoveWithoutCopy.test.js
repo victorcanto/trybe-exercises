@@ -9,7 +9,7 @@ describe('myRemoveWithoutCopy', () => {
   })
   const array = [1, 2, 3, 4];
   it('Verifica se o array passado sofreu alterações', () => {
-    expect(array).toEqual(myRemoveWithoutCopy(array, 3));
+    expect(array).not.toEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3));
   })
   it('myRemoveWithoutCopy([1, 2, 3, 4], 5) retorna [ 1, 2, 3, 4 ]', () => {
     expect([ 1, 2, 3, 4 ]).toEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5));
