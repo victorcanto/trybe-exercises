@@ -82,6 +82,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 10-1: _Primeiros passos no Jest_
 - [X] 10-2: _Jest - Testes Assíncronos_
 - [X] 10-3: _Jest - Simulando comportamentos_
-- [ ] 10-4: [Projeto - Jest Assíncrono e Mocking](link indísponível no momento)
+- [X] 10-4: [Projeto - Jest Assíncrono e Mocking](link indísponível no momento)
+
+##### Bloco 11: Introdução à React
+- [X] 11-1: Introdução - Front-end
+- [X] 11-1: Introdução - React
+- [X] 11-1: Hello, world!' no React!
+- [ ] 11-2: Componentes React
+- [ ] 11-3: Projeto - Movie Cards Library
+
 
 
