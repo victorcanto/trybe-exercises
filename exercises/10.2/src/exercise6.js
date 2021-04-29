@@ -25,10 +25,10 @@ const getAnimal = (name) => {
 const findAnimalByAge = (age) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const animalList = Animals.filter((animal) => animal.age === age);
+      const arrayAnimal = Animals.filter((animal) => animal.age === age);
       const error = "Nenhum animal com essa idade!";
-      if (animalList.length !== 0) {
-        return resolve(animalList);
+      if (arrayAnimal.length !== 0) {
+        return resolve(arrayAnimal);
       } else {
         return reject(error);
       }
@@ -37,7 +37,7 @@ const findAnimalByAge = (age) => {
 };
 
 const getAnimalByAge = (age) => {
-  return findAnimalByAge(age).then((animalList) => animalList);
+  return findAnimalByAge(age).then((arrayAnimal) => arrayAnimal);
 };
 
 module.exports = {

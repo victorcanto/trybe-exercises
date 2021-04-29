@@ -33,8 +33,8 @@ describe("Testando promise - findAnimalByAge", () => {
   describe("Quando não existe o animal com a idade procurada", () => {
     test("Retorna uma mensagem de erro", () => {
       expect.assertions(1);
-      return getAnimalByAge(7).catch((error) =>
-        expect(error).toEqual("Nenhum animal com essa idade!")
+      return getAnimalByAge(7).catch((e) =>
+        expect(e).toEqual("Nenhum animal com essa idade!")
       );
     });
   });
