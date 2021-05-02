@@ -1,6 +1,6 @@
-const functions = require("./functions");
+const functions = require('./functions');
 
-test("#generateRandomNumber R1", () => {
+test('#generateRandomNumber R1', () => {
   functions.generateRandomNumber = jest.fn().mockReturnValue(10);
 
   functions.generateRandomNumber();
@@ -9,7 +9,7 @@ test("#generateRandomNumber R1", () => {
   expect(functions.generateRandomNumber).toHaveBeenCalledTimes(2);
 });
 
-test("#generateRandomNumber R2", () => {
+test('#generateRandomNumber R2', () => {
   functions.generateRandomNumber = jest
     .fn()
     .mockImplementationOnce((a, b) => a / b);
@@ -19,9 +19,9 @@ test("#generateRandomNumber R2", () => {
   expect(functions.generateRandomNumber).toHaveBeenCalledTimes(1);
 });
 
-test("#generateRandomNumber R3", () => {
+test('#generateRandomNumber R3', () => {
   functions.generateRandomNumber = jest
-    .spyOn(functions, "generateRandomNumber")
+    .spyOn(functions, 'generateRandomNumber')
     .mockImplementation((a, b, c) => {
       return a * b * c;
     });
@@ -37,58 +37,80 @@ test("#generateRandomNumber R3", () => {
   expect(functions.generateRandomNumber).toHaveBeenCalledTimes(1);
 });
 
-describe("#R4", () => {
-  it("#getUpperCaseString", () => {
+describe('#R4', () => {
+  it('#getUpperCaseString', () => {
     functions.getUpperCaseString = jest
-      .spyOn(functions, "getUpperCaseString")
+      .spyOn(functions, 'getUpperCaseString')
       .mockImplementation((str) => {
         return str.toLowerCase();
       });
 
-    expect(functions.getUpperCaseString("VICTOR")).toBe("victor");
+    expect(functions.getUpperCaseString('VICTOR')).toBe('victor');
     expect(functions.getUpperCaseString).toHaveBeenCalled();
     expect(functions.getUpperCaseString).toHaveBeenCalledTimes(1);
   });
 
-  it("#getFirstLetter", () => {
+  it('#getFirstLetter', () => {
     functions.getFirstLetter = jest
-      .spyOn(functions, "getFirstLetter")
+      .spyOn(functions, 'getFirstLetter')
       .mockImplementation((str) => {
         return str[str.length - 1];
       });
 
-    expect(functions.getFirstLetter("Victor")).toBe("r");
+    expect(functions.getFirstLetter('Victor')).toBe('r');
     expect(functions.getFirstLetter).toHaveBeenCalled();
     expect(functions.getFirstLetter).toHaveBeenCalledTimes(1);
   });
 
-  it("#concatenateString", () => {
+  it('#concatenateString', () => {
     functions.concatenateString = jest
-      .spyOn(functions, "concatenateString")
+      .spyOn(functions, 'concatenateString')
       .mockImplementation((str1, str2, str3) => {
         return str1.concat(str2, str3);
       });
 
-    expect(functions.concatenateString("O ", "teste ", "funciona!")).toBe(
-      "O teste funciona!"
+    expect(functions.concatenateString('O ', 'teste ', 'funciona!')).toBe(
+      'O teste funciona!'
     );
     expect(functions.concatenateString).toHaveBeenCalled();
     expect(functions.concatenateString).toHaveBeenCalledTimes(1);
   });
 });
 
-test("#R5", () => {
+test('#R5', () => {
   functions.getUpperCaseString = jest
-    .spyOn(functions, "getUpperCaseString")
+    .spyOn(functions, 'getUpperCaseString')
     .mockImplementation((str) => {
       return str.toLowerCase();
     });
 
-  expect(functions.getUpperCaseString("VICTOR")).toBe("victor");
+  expect(functions.getUpperCaseString('VICTOR')).toBe('victor');
   expect(functions.getUpperCaseString).toHaveBeenCalled();
   expect(functions.getUpperCaseString).toHaveBeenCalledTimes(2);
 
   functions.getUpperCaseString.mockRestore();
 
-  expect(functions.getUpperCaseString("victor")).toBe("VICTOR");
+  expect(functions.getUpperCaseString('victor')).toBe('VICTOR');
+});
+
+describe('#R6', () => {
+  // source ref: https://jestjs.io/pt-BR/docs/asynchronous#asyncawait
+  const mockAPI = jest.spyOn(functions, 'getDogPicturesAPI');
+  afterEach(() => mockAPI.mockReset());
+
+  it('request sucess', async () => {
+    mockAPI.mockResolvedValue('request sucess');
+
+    await expect(mockAPI()).resolves.toBe('request sucess');
+    expect(mockAPI).toHaveBeenCalled();
+    expect(mockAPI).toHaveBeenCalledTimes(1);
+  });
+
+  it('request failed', async () => {
+    mockAPI.mockRejectedValue('request failed');
+
+    await expect(mockAPI()).rejects.toMatch('request failed');
+    expect(mockAPI).toHaveBeenCalled();
+    expect(mockAPI).toHaveBeenCalledTimes(1);
+  });
 });
