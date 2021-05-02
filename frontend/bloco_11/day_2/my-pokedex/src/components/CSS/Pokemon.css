@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #023e8a;
+}
+
+.info_pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px 0;
+  background-color: #ade8f4;
+  font-family: 'Krona One', sans-serif;
+}
+
+.info_pokemon div {
+  margin: 0 10px;
+}
+
+.name_pokemon {
+  font-style: oblique;
+  font-size: 20px;
+}
+
+.type_pokemon {
+  text-transform: uppercase;
+}
+.average_pokemon {
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
