@@ -11,10 +11,29 @@ class App extends React.Component {
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      qtdeClicksRed: 0,
+      qtdeClicksBlue: 0,
+      qtdeClicksBlack: 0,
+    };
   }
 
   handleClick(e) {
-    return console.log(`Você clicou no botão ${colorBr[e.target.value]}`);
+    if (e.target.value === 'red') {
+      this.setState((previousState, _props) => ({
+        qtdeClicksRed: previousState.qtdeClicksRed + 1,
+      }));
+    }
+    if (e.target.value === 'blue') {
+      this.setState((previousState, _props) => ({
+        qtdeClicksBlue: previousState.qtdeClicksBlue + 1,
+      }));
+    } else {
+      this.setState((previousState, _props) => ({
+        qtdeClicksBlack: previousState.qtdeClicksBlack + 1,
+      }));
+    }
+    console.log(`Você clicou no botão ${colorBr[e.target.value]}`);
   }
   render() {
     return (
@@ -22,9 +41,11 @@ class App extends React.Component {
         <button className='red_button' onClick={this.handleClick} value='red'>
           Red
         </button>
+        <span>{`Número de cliques: ${this.state.qtdeClicksRed}`}</span>
         <button className='blue_button' onClick={this.handleClick} value='blue'>
           Blue
         </button>
+        <span>{`Número de cliques: ${this.state.qtdeClicksBlue}`}</span>
         <button
           className='black_button'
           onClick={this.handleClick}
@@ -32,6 +53,7 @@ class App extends React.Component {
         >
           Black
         </button>
+        <span>{`Número de cliques: ${this.state.qtdeClicksBlack}`}</span>
       </div>
     );
   }
