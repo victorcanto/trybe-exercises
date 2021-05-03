@@ -2,15 +2,16 @@ import React from 'react';
 import './App.css';
 
 const colorBr = {
-  red: 'vermelho',
+  red: 'vermelha',
   blue: 'azul',
-  black: 'preto',
+  black: 'preta',
 };
 
 class App extends React.Component {
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
+
     this.state = {
       qtdeClicksRed: 0,
       qtdeClicksBlue: 0,
@@ -23,18 +24,35 @@ class App extends React.Component {
       this.setState((previousState, _props) => ({
         qtdeClicksRed: previousState.qtdeClicksRed + 1,
       }));
+      if (this.state.qtdeClicksRed % 2 !== 0) {
+        e.target.style.backgroundColor = '#50d43e';
+      } else {
+        e.target.style.backgroundColor = '';
+      }
     }
     if (e.target.value === 'blue') {
       this.setState((previousState, _props) => ({
         qtdeClicksBlue: previousState.qtdeClicksBlue + 1,
       }));
-    } else {
+      if (this.state.qtdeClicksBlue % 2 !== 0) {
+        e.target.style.backgroundColor = '#50d43e';
+      } else {
+        e.target.style.backgroundColor = '';
+      }
+    }
+    if (e.target.value === 'black') {
       this.setState((previousState, _props) => ({
         qtdeClicksBlack: previousState.qtdeClicksBlack + 1,
       }));
+      if (this.state.qtdeClicksBlack % 2 !== 0) {
+        e.target.style.backgroundColor = '#50d43e';
+      } else {
+        e.target.style.backgroundColor = '';
+      }
     }
-    console.log(`Você clicou no botão ${colorBr[e.target.value]}`);
+    console.log(`Cor ${colorBr[e.target.value]}`);
   }
+
   render() {
     return (
       <div className='buttons_container'>
