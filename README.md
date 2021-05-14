@@ -87,11 +87,26 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ## Desenvolvimento Front-end
 
 ##### Bloco 11: Introdução à React
-- [X] 11-1: Introdução - Front-end
-- [X] 11-1: Introdução - React
-- [X] 11-1: Hello, world!' no React!
-- [X] 11-2: Componentes React
+
+- [X] 11-1: _Introdução - React_
+- [X] 11-2: _Componentes React_
 - [X] 11-3: [Projeto - Movie Cards Library](link indisponível no momento)
 
+##### Bloco 12: Componentes com Estado, Eventos e Formulário com React
+
+- [X] 12-1: _Componentes com estado e eventos_
+- [X] 12-2: _Formulários no React_
+- [X] 12-3: [Projeto - Movie Cards Library Stateful](link indisponível no momento)
+
+##### Bloco 13: Componentes com Estado, Eventos e Formulário com React
+
+- [X] 13-1: Ciclo de Vida de Componentes
+- [X] 13-2: React Router
+- [X] 13-3: [Projeto - Movie Cards Library CRUD](link indisponível no momento)
+
+##### Bloco 14: Metodologias Ágeis
+
+- [X] 14-1: _Metodologias Ágeis
+- [ ] 14-2: [Projeto - Frontend Online Store]
 
 
