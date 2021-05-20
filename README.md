@@ -111,6 +111,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 15: Testes automatizados com React Testing Library
 
-- [X] 15-1: _Introdução ao RTL_
+- [ ] 15-1: _Introdução ao RTL_
 
 
