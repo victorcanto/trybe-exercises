@@ -100,13 +100,17 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 13: Componentes com Estado, Eventos e Formulário com React
 
-- [X] 13-1: Ciclo de Vida de Componentes
-- [X] 13-2: React Router
+- [X] 13-1: _Ciclo de Vida de Componentes_
+- [X] 13-2: _React Router_
 - [X] 13-3: [Projeto - Movie Cards Library CRUD](link indisponível no momento)
 
 ##### Bloco 14: Metodologias Ágeis
 
-- [X] 14-1: _Metodologias Ágeis
-- [ ] 14-2: [Projeto - Frontend Online Store]
+- [X] 14-1: _Metodologias Ágeis_
+- [X] 14-2: [Projeto - Frontend Online Store]
+
+##### Bloco 15: Testes automatizados com React Testing Library
+
+- [X] 15-1: _Introdução ao RTL_
 
 
