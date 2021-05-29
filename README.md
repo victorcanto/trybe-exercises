@@ -107,7 +107,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 14: Metodologias Ágeis
 
 - [X] 14-1: _Metodologias Ágeis_
-- [X] 14-2: [Projeto - Frontend Online Store]
+- [X] 14-2: [Projeto - Frontend Online Store](link indisponível no momento)
 
 ##### Bloco 15: Testes automatizados com React Testing Library
 
