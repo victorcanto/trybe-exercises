@@ -1,0 +1,2 @@
+--Escreva uma query para exibir o nome e as horas dos três projetos com a maior quantidade de horas.
+SELECT Projects.Name AS project, Projects.Hours AS qtd_hours FROM Scientists.Projects ORDER BY Projects.Hours DESC LIMIT 3;SELECT Projects.Name AS project, Projects.Hours AS qtd_hours FROM Scientists.Projects ORDER BY Projects.Hours DESC LIMIT 3;
