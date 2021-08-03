@@ -1,0 +1,8 @@
+SELECT
+  ROUND(AVG(SALARY), 2) AS 'Média salarial'
+FROM
+  hr.employees
+GROUP BY
+  DEPARTMENT_ID
+HAVING
+  DEPARTMENT_ID > 10;
