@@ -2,7 +2,6 @@ const { questionInt, question } = require('readline-sync');
 
 function again() {
   console.log('Ops, digite um número inteiro maior que 0');
-  logFibonacci();
 }
 
 function quit() {
