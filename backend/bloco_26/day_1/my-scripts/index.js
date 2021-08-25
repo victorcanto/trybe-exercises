@@ -4,6 +4,8 @@ const arrScripts = [
   { id: 1, name: 'Calcular IMC', src: './imc.js' },
   { id: 2, name: 'Calcular Velocidade Média', src: './velocidade.js' },
   { id: 3, name: 'Jogo da Adivinhação', src: './sorteio.js' },
+  { id: 4, name: 'Calcular Fatorial', src: './fatorial.js' },
+  { id: 5, name: 'Calcular Fibonacci', src: './fibonacci.js' },
 ];
 
 function getScript(scriptId) {
