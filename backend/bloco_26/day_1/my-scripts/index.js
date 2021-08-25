@@ -9,7 +9,6 @@ const arrScripts = [
 ];
 
 function getScript(scriptId) {
-  if (scriptId === 0) return;
   const [selectedScript] = arrScripts.filter(({ id }) => id === scriptId);
   return selectedScript;
 }
@@ -24,6 +23,8 @@ function handleScripts() {
   const scriptId = questionInt(
     'Qual script deve ser executado? Escolha pelo número da lista ou aperte "0" para cancelar '
   );
+
+  if (scriptId === 0) return;
 
   const { src } = getScript(scriptId);
   require(src);
