@@ -10,3 +10,15 @@ function returnPromise(a, b, c) {
     resolve(calcResult);
   });
 }
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * 100 + 1);
+}
+
+const num1 = getRandomNumber();
+const num2 = getRandomNumber();
+const num3 = getRandomNumber();
+
+returnPromise(num1, num2, num3)
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
