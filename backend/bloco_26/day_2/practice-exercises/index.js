@@ -11,16 +11,29 @@ function calculate(a, b, c) {
   });
 }
 
-function callCalculate() {
-  const randomNumbers = Array.from({ length: 3 }).map(getRandomNumber);
+// function callCalculate() {
+//   const randomNumbers = Array.from({ length: 3 }).map(getRandomNumber);
 
-  calculate(...randomNumbers)
-    .then((result) => console.log(result))
-    .catch((err) => console.log(err));
-}
+//   calculate(...randomNumbers)
+//     .then((result) => console.log(result))
+//     .catch((err) => console.log(err));
+// }
 
-callCalculate();
+// callCalculate();
 
 function getRandomNumber() {
   return Math.floor(Math.random() * 100 + 1);
+}
+
+// Async/Await
+
+async function callCalculate() {
+  const randomNumbers = Array.from({ length: 3 }).map(getRandomNumber);
+
+  try {
+    const result = await calculate(...randomNumbers);
+    console.log(result);
+  } catch (err) {
+    console.error(err);
+  }
 }
