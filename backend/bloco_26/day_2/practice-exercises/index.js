@@ -1,39 +1,51 @@
-function calculate(a, b, c) {
-  return new Promise((resolve, reject) => {
-    const condition = [...arguments].some((arg) => typeof arg === 'string');
-    if (condition) reject(new Error('Informe apenas números'));
+const { questionInt } = require('readline-sync');
 
-    const calcResult = (a + b) * c;
+const arrScripts = [
+  { id: 1, name: 'Calcular', src: './calculate.js' },
+  { id: 2, name: 'Mostrar Simpsons', src: './simpsons/exercise1.js' },
+  { id: 3, name: 'Mostrar Simpson por id', src: './simpsons/exercise2.js' },
+  {
+    id: 4,
+    name: 'Deletar Simpsons com id 10 e 6',
+    src: './simpsons/exercise3.js',
+  },
+  {
+    id: 5,
+    name: 'Cria novo arquivo chamado simpsonsFamily.json',
+    src: './simpsons/exercise4.js',
+  },
+  {
+    id: 6,
+    name: 'Adiciona o personagem Nelson para o arquivo simpsonsFamily.json',
+    src: './simpsons/exercise5.js',
+  },
+  {
+    id: 7,
+    name: 'Substitui Nelson por Maggie Simpson',
+    src: './simpsons/exercise6.js',
+  },
+];
 
-    if (calcResult < 50) reject(new Error('Valor muito baixo'));
-
-    resolve(calcResult);
-  });
+function getScript(scriptId) {
+  const [selectedScript] = arrScripts.filter(({ id }) => id === scriptId);
+  return selectedScript;
 }
 
-// function callCalculate() {
-//   const randomNumbers = Array.from({ length: 3 }).map(getRandomNumber);
-
-//   calculate(...randomNumbers)
-//     .then((result) => console.log(result))
-//     .catch((err) => console.log(err));
-// }
-
-// callCalculate();
-
-function getRandomNumber() {
-  return Math.floor(Math.random() * 100 + 1);
+function showList() {
+  return arrScripts.map(({ id, name }) => console.log(`${id} - ${name}`));
 }
 
-// Async/Await
+function handleScripts() {
+  showList();
 
-async function callCalculate() {
-  const randomNumbers = Array.from({ length: 3 }).map(getRandomNumber);
+  const scriptId = questionInt(
+    'Qual script deve ser executado? Escolha pelo número da lista ou aperte "0" para cancelar '
+  );
 
-  try {
-    const result = await calculate(...randomNumbers);
-    console.log(result);
-  } catch (err) {
-    console.error(err);
-  }
+  if (scriptId === 0) return;
+
+  const { src } = getScript(scriptId);
+  require(src);
 }
+
+handleScripts();
