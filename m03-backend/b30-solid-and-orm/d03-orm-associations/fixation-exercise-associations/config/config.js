@@ -11,9 +11,11 @@ module.exports = {
   test: {
     username: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DATABASE,
+    database: 'orm_assoc_test_db',
     host: process.env.HOSTNAME,
     dialect: 'mysql',
+    // adicione essa linha a sua configuração para omitir mensagens de log no orm
+    logging: false,
   },
   production: {
     username: process.env.MYSQL_USER,
