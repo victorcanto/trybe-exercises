@@ -24,28 +24,38 @@ app.get('/employees', async (_req, res) => {
 });
 
 app.post('/employees', async (req, res) => {
-  const transaction = await sequelize.transaction();
   try {
     const { firstName, lastName, age, city, street, number } = req.body;
 
-    const employee = await Employee.create(
-      { firstName, lastName, age },
-      { transaction }
-    );
+    const result = await sequelize.transaction(async (transaction) => {
+      const employee = await Employee.create(
+        {
+          firstName,
+          lastName,
+          age,
+        },
+        { transaction }
+      );
 
-    await Address.create(
-      { city, street, number, employeeId: employee.id },
-      { transaction }
-    );
-    // Se chegou até essa linha, quer dizer que nenhum erro ocorreu.
-    // Com isso, podemos finalizar a transação usando a função `commit`.
-    await transaction.commit();
+      await Address.create(
+        {
+          city,
+          street,
+          number,
+          employeeId: employee.id,
+        },
+        { transaction }
+      );
 
-    return res.status(201).json({ message: 'Cadastrado com sucesso' });
+      return res.status(201).json({ message: 'Cadastrado com sucesso' });
+    });
+
+    // Se chegou até aqui é porque as operações foram concluídas com sucesso,
+    // não sendo necessário finalizar a transação manualmente.
+    // `result` terá o resultado da transação, no caso um empregado e o endereço cadastrado
   } catch (e) {
     // Se entrou nesse bloco é porque alguma operação falhou.
     // Nesse caso, o sequelize irá reverter as operações anteriores com a função rollback, não sendo necessário fazer manualmente
-    await transaction.rollback();
     console.log(e.message);
     res.status(500).json({ message: 'Algo deu errado' });
   }
